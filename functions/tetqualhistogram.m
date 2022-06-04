@@ -1,5 +1,6 @@
 function tetqualhistogram(meshQual, surfaceID, varargin)
 
+% Histograms of mesh quality
 
 if nargin == 2
     subplot(6, 6, [1:12])

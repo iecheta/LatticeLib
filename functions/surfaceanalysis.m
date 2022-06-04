@@ -1,6 +1,8 @@
 function [surfaceNormals, strutAngle, skinAngle, t, normalRef, varargout] = ...
     surfaceanalysis(surfaceVertices, strutVertices, strutID, varargin)
 
+% Extract surface parameteres from lattice structure surface
+
 if nargin == 4
     if varargin{1} == "tfull"
         tfull = true;

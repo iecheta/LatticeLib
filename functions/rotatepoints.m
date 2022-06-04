@@ -1,6 +1,6 @@
 function coordsNew = rotatepoints(coordsOld, theta, axis)
 
-% Clockwise rotation (about positive axes) in 3 spatial dimensions (degrees)
+% Clockwise rotation (in degrees) about positive axes in 3 dimensions
 
 % Inputs:
     % coordsOld: 3 x n matrix of coordinates

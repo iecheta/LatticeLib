@@ -1,4 +1,6 @@
-function [tessellation_volume, x1, y1, z1] = tessellate2(d, cs, radius, n, z, dx)
+function [tessellation_volume, x1, y1, z1] = tessellate(d, cs, radius, n, z, dx)
+
+% Tessellate signed distance field of unit cell
 
 cell_count = prod(n);
 unit_cell_length = size(d, 1);

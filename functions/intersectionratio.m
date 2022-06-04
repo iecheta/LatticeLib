@@ -1,5 +1,6 @@
 function [dist, surfaceNormal, v, t] = intersectionratio(x0, x1, x2, varargin)
 
+% Calculate intersection ratio, and additional vectors
 
 % Inputs:
         % x0: point in 3D space

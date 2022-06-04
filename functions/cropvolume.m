@@ -1,6 +1,6 @@
 function [u_crop] = cropvolume(u, crop_height_top, crop_height_bottom, z)
 
-% Trim volumes with a plane parallel to x-y plane
+% Crop volumes using a plane parallel to x-y plane
 
 % Inputs:
     % u:            the volume to crop

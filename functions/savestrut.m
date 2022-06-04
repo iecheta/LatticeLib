@@ -1,6 +1,8 @@
 function savestrut(v, skinAngle, skin_angle360, t,...
     dists, filter_vector, strut_count, filter_type, segments, save_name)
 
+    % Saving strut data file
+
     v = v(filter_vector, :);
     skinAngle = skinAngle(filter_vector);
     skin_angle360 = skin_angle360(filter_vector);

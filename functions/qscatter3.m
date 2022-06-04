@@ -1,5 +1,7 @@
 function qscatter3(v, varargin)
 
+% Shorthand scatter3.m plot
+
 defaultCol = [0 0.4510 0.7412];
 
 if size(v, 1) == 3 && size(v, 2) == 3

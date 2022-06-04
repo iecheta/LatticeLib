@@ -1,8 +1,8 @@
 function [vol] = stlvol(f, v)
 
-% Calculate stl volume
+% Calculate volume enclosed by triangulated surface
 
-% 1. Engineering, C. & Avenue, F. EFFICIENT FEATURE EXTRACTION FOR 2D/3D OBJECTS IN MESH REPRESENTATION. Virtual Real. 1–5
+% 1. Engineering, C. & Avenue, F. EFFICIENT FEATURE EXTRACTION FOR 2D/3D OBJECTS IN MESH REPRESENTATION. Virtual Real. 1ï¿½5
 % http://chenlab.ece.cornell.edu/Publication/Cha/icip01_Cha.pdf
 % winopen([getenv('onedrive') '\PhD\Mendeley\Engineering, Avenue'])
 

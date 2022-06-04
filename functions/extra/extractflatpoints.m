@@ -1,6 +1,6 @@
 function [surf_nodes, nodes_flat] = extractflatpoints(node, face, amp, div, surface_location)
 
-% abaqusfilegen dependency
+% Find top and bottom node sets. abaqusfilegen.m dependency
 
 faceID = unique(face(:));
 
