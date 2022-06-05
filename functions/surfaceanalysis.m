@@ -1,6 +1,5 @@
 function [surfaceNormals, strutAngle, skinAngle, t, normalRef, varargout] = ...
     surfaceanalysis(surfaceVertices, strutVertices, strutID)
-%     surfaceanalysis(surfaceVertices, strutVertices, strutID, varargin)
 
 % Extract surface parameteres from lattice structure surface
 %
@@ -32,28 +31,6 @@ function [surfaceNormals, strutAngle, skinAngle, t, normalRef, varargout] = ...
 %                   angular range between 0-360 degrees.
 
 
-% if nargin == 4
-%     if varargin{1} == "tfull"
-%         tfull = true;
-%         ang = [];
-%     else
-%         error('variable incorrect: tfull')
-%     end
-%     
-% elseif nargin == 5
-%     if varargin{1} == "tfull" && varargin{2} == "radians"
-%         tfull = true;
-%         ang = 'radians';
-%     else
-%         error('variables incorrect: tfull/angle type')
-%     end
-%     
-% else
-%     tfull = false;
-%     ang = [];
-% end
-    
-    
 % Initialise arrays
 surfaceNormals = zeros(size(surfaceVertices));
 % surfaceNormalsReorient = zeros(size(surfaceVertices));
@@ -71,10 +48,6 @@ strutNum = zeros(numOfPoints, 1);
 % Find the top and bottom z values
 top_surf = max(surfaceVertices(:, 3));
 bottom_surf = min(surfaceVertices(:, 3));
-
-% strut_axis_vector = strutVertices(:, 1)-strutVertices(:, end);
-% ref_vector = normvec([strutVertices(:, end) - strutVertices(:, 1)]);
-
 
 % For each point on the surface, find the surface normal, the closest line
 % segment, and the orientation of the line segment
