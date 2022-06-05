@@ -55,12 +55,12 @@ The following scripts are located in the subfolder \xct:
 
 |filename|description|
 |------------|-------|
-|import_point_cloud.m|Extract vertices from STL file of BCCZ lattice structure and segment into individual struts|
+|[`import_point_cloud.m`](/scripts/xct/import_point_cloud.m)|Extract vertices from STL file of BCCZ lattice structure and segment into individual struts|
 |cross_section_analysis.m|Fit circles to cross sections of lattice struts, using least-squares|
 |surface_unwrapping_struts.m|Unwrap strut surfaces. Useful for investigating texture bias|
 |plots_xct.m|Example plots of all the above scripts in this table|
 
-### [`\functions`](\functions)
+### [`\functions`](/functions)
 This folder contains all of the functions used by LatticeLib. Most of the functions have explanations about their inputs and outputs, if you wish to use them externally. Additionally, the scripts (in the folder `\scripts`) hopefully demonstrate how the functions are used. The additional folder `\extra` contains functions (and any dependencies) that I wrote for other things not used by LatticeLib but that I felt might be useful.
 
 ### `\exampledata`
