@@ -17,14 +17,14 @@ LatticeLib consists of a select set of functions developed during my PhD. The fo
 
 ## Installation
 ---
-Once LatticeLib has been downloaded, all of its folders (excluding .git) must be added to the MATLAB search path. To do this, follow these steps:
-* In MATLAB, change the current folder to ...\LatticeLib\functions
+Once LatticeLib has been downloaded, all of its folders (excluding `\.git`) must be added to the MATLAB search path. To do this, follow these steps:
+* In MATLAB, change the current folder to `...\LatticeLib\functions`
 * Enter the command `latticelibinstall` into the command window. This command will run the function `latticelibinstall.m` which automatically adds all required folders to the MATLAB search path.
 
 If any problems with installation persist, try the following:
 * Enter `pathtool` into the command window
-* Select "Add with Subfolders..." and select the folder \exampledata
-* Repeat the above bullet point for the remaining two folders, i.e. \functions and \scripts
+* Select "Add with Subfolders..." and select the folder `\exampledata`
+* Repeat the above bullet point for the remaining two folders, i.e. `\functions` and `\scripts`
 * Select "Save" and close the window
 
 Note: `latticelibinstall.m` does not check if the folders have already been added to the search path.
@@ -35,12 +35,12 @@ LatticeLib consists of three main folders:
 
 |folder|description|
 |------------|-------|
-| \scripts         | Demonstrations showcasing how LatticeLib's functions are used. Contains two subfolders: \lattice, \xct. |
-| \functions       | All of the functions used by LatticeLib (plus a few extras, see next section)  |
-| \exampledata       | Data files (.mat) used to load the example data from each script. Contains two subfolders: \lattice, \xct.   |
+| `\scripts`         | Demonstrations showcasing how LatticeLib's functions are used. Contains two subfolders: `\lattice`, `\xct`. |
+| `\functions`       | All of the functions used by LatticeLib (plus a few extras, see next section)  |
+| `\exampledata `      | Data files (.mat) used to load the example data from each script. Contains two subfolders: `\lattice`, `\xct`.   |
 
-### \scripts
-The scripts in this folder provide demonstrations showcasing how LatticeLib's functions are used. The scripts are sorted into two subfolders. The following scripts are located in the subfolder \lattice:
+### `\scripts`
+The scripts in this folder provide demonstrations showcasing how LatticeLib's functions are used. The scripts are sorted into two subfolders. The following scripts are located in the subfolder `\lattice`:
 
 |filename|description|
 |------------|-------|
@@ -60,16 +60,16 @@ The following scripts are located in the subfolder \xct:
 |surface_unwrapping_struts.m|Unwrap strut surfaces. Useful for investigating texture bias|
 |plots_xct.m|Example plots of all the above scripts in this table|
 
-### \functions
-This folder contains all of the functions used by LatticeLib. Most of the functions have explanations about their inputs and outputs, if you wish to use them externally. Additionally, the scripts (in the folder \scripts) hopefully demonstrate how the functions are used. The additional folder \extra contains functions (and any dependencies) that I wrote for other things not used by LatticeLib but that I felt might be useful.
+### [`\functions`](\functions)
+This folder contains all of the functions used by LatticeLib. Most of the functions have explanations about their inputs and outputs, if you wish to use them externally. Additionally, the scripts (in the folder `\scripts`) hopefully demonstrate how the functions are used. The additional folder `\extra` contains functions (and any dependencies) that I wrote for other things not used by LatticeLib but that I felt might be useful.
 
-### \exampledata
+### `\exampledata`
 
-This folder contains all the data files (.mat) which are - by default - used by the scripts. The contents of this folder are required so that each script can perform independently, that is, without having to run any other code. The data files are organised into two folders: \lattice, and \xct (reflecting the folder structure in \scripts).
+This folder contains all the data files (.mat) which are - by default - used by the scripts. The contents of this folder are required so that each script can perform independently, that is, without having to run any other code. The data files are organised into two folders: `\lattice`, and `\xct` (reflecting the folder structure in `\scripts`).
 
 ## Dependencies
 ---
-There is one external dependency, found in \scripts\lattice\create_mesh.m. Conversion of triangulated surface mesh into tetrahedral mesh - i.e. a 3D Delaunay triangulation - is performed using [iso2mesh](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Home) v1.9.0. iso2mesh must be [downloaded](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Download) and added to MATLAB's search path.
+There is one external dependency, found in `...\scripts\lattice\create_mesh.m`. Conversion of triangulated surface mesh into tetrahedral mesh - i.e. a 3D Delaunay triangulation - is performed using [iso2mesh](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Home) v1.9.0. iso2mesh must be [downloaded](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Download) and added to MATLAB's search path.
 
 Iso2mesh can be added to MATLAB's search path by again entering the `pathtool` command and selecting "Add with subfolders..." to add the iso2mesh parent folder and all its subfolders. The iso2mesh website discusses installation [here.](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Doc/Installation)
 

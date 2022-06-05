@@ -1,6 +1,6 @@
 function [vol] = tetvolume(verts)
 
-% Calculate volume of tetrahedron
+% Calculate volume of a tetrahedron
 % https://mathworld.wolfram.com/Tetrahedron.html
 
 % Input
