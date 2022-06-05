@@ -76,5 +76,5 @@ Iso2mesh can be added to MATLAB's search path by again entering the `pathtool` c
 ## Known Issues
 ---
 - A lot of this code was written as a proof of concept, therefore, optimisation is needed for several functions. If I ever get round to improving this code, I will likely also rewrite it using Python.
-- The vertices in the tetrahedral mesh contain a few points which are far away from the mesh and are not part of the mesh. These points are likely leftover from the initialisation of the Delaunay triangulation. These points are not indexed by the mesh's indexing matrix and can therefore often be ignored. However, if you wish to remove these points, see my function meshfilter.m
+- The vertices in the tetrahedral mesh contain a few points which are far away from the mesh and are not part of the mesh. These points are likely leftover from the initialisation of the Delaunay triangulation. These points are not indexed by the mesh's indexing matrix and can therefore often be ignored. However, if you wish to remove these points, see my function [meshfilter.m](/functions/extra/meshfilter.m)
 - Each row in the indexing matrix for the surface triangles of the tetrahedral mesh is duplicated. It is unclear why iso2mesh produces this data; it has not caused me any errors, however.
