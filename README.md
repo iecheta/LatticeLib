@@ -55,7 +55,7 @@ The following scripts are located in the subfolder \xct:
 
 |filename|description|
 |------------|-------|
-|[`import_point_cloud.m`](/scripts/xct/import_point_cloud.m)|Extract vertices from STL file of BCCZ lattice structure and segment into individual struts|
+|[import_point_cloud.m](/scripts/xct/import_point_cloud.m)|Extract vertices from STL file of BCCZ lattice structure and segment into individual struts|
 |[cross_section_analysis.m](/scripts/xct/cross_section_analysis.m)|Fit circles to cross sections of lattice struts, using least-squares|
 |[surface_unwrapping_struts.m](/scripts/xct/surface_unwrapping_struts.m)|Unwrap strut surfaces. Useful for investigating texture bias|
 |[plots_xct.m](/scripts/xct/plots_xct.m)|Example plots of all the above scripts in this table|
