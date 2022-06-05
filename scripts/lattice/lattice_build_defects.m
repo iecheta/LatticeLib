@@ -6,6 +6,9 @@
 % defects. Unique parts are indicated with **** NEW **** and are located
 % only in the following two sections.
 
+% If you wish to save the data file(s) produced by this script, change the
+% variable 'filesave' below to 'true'. Note that the files will not be
+% saved if they already exist in the current directory.
 clear
 filesave = false;
 %% Load defect data **** NEW ****

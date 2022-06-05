@@ -1,5 +1,10 @@
 % Create a triangulated surface of the BCCZ strut-based lattice structure.
 % No defects are applied here.
+%
+% If you wish to save the data file(s) produced by this script, change the
+% variable 'filesave' below to 'true'. Note that the files will not be
+% saved if they already exist in the current directory.
+
 clear
 filesave = false;
 %% Define lattice geometry

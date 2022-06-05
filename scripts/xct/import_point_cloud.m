@@ -15,6 +15,10 @@
 %   - Unfiltered inclined and vertical struts
 %   - Example data stored in \LatticeLib\exampledata\xct\stl import
 
+% If you wish to save the data file(s) produced by this script, change the
+% variable 'filesave' below to 'true'. Note that the files will not be
+% saved if they already exist in the current directory.
+
 clear
 filesave = false;
 %% Define unit cell size and initial filtering parameters

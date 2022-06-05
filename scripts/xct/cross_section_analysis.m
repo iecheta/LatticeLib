@@ -7,6 +7,10 @@
 %     \LatticeLib\exampledata\xct\stl import
 %   - Confirmation of whether or not an inclined strut dataset was selected
 
+% If you wish to save the data file(s) produced by this script, change the
+% variable 'filesave' below to 'true'. Note that the files will not be
+% saved if they already exist in the current directory.
+
 clear
 filesave = false;
 %% Select example point cloud data of struts
