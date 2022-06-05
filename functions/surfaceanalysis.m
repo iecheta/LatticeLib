@@ -1,28 +1,57 @@
 function [surfaceNormals, strutAngle, skinAngle, t, normalRef, varargout] = ...
-    surfaceanalysis(surfaceVertices, strutVertices, strutID, varargin)
+    surfaceanalysis(surfaceVertices, strutVertices, strutID)
+%     surfaceanalysis(surfaceVertices, strutVertices, strutID, varargin)
 
 % Extract surface parameteres from lattice structure surface
+%
+% Inputs
+%   surfaceVertices: n x 3 matrix of surface points
+%   strutVertices:   3 x m matrix of strut start/end points
+%   strutID:         m-element vector used to ID the struts in
+%                    strutVertices. This is the second output value of the
+%                    function segmentsdefine.m
+% Outputs
+%   surfaceNormals: n x 3 matrix of surface normals
+%   strutAngle:     n x 1 vector of overhang angle (in degrees) of the
+%                   strut that each point on the surface is associated to
+%   skinAngle:      n x 1 vector of upskin/downskin angle (in degrees)
+%                   between surface normal and reference vector
+%                   (normalRef). Angular range of 0-180 degrees
+%   t:              n x 1 vector of intersection ratios of all points
+%                   (these values are modified where necessary so that t is
+%                   never < 0 or > 1)
+%   normalRef:      reference vector used for calculating upskin/downskin
+%                   angle
+% ADDITIONAL OUTPUTS
+%   varargout{1}:   n x 1 vector of distances between surface points and 
+%                   closest strut;
+%   varargout{2}:   n x 1 vector of integers used to indicate which strut
+%                   is closest to the n-th point. The numbering convention
+%                   is arbitrary;
+%   varargout{3}:   n x 1 vector of unpskin/downskin angles, but with
+%                   angular range between 0-360 degrees.
 
-if nargin == 4
-    if varargin{1} == "tfull"
-        tfull = true;
-        ang = [];
-    else
-        error('variable incorrect: tfull')
-    end
-    
-elseif nargin == 5
-    if varargin{1} == "tfull" && varargin{2} == "radians"
-        tfull = true;
-        ang = 'radians';
-    else
-        error('variables incorrect: tfull/angle type')
-    end
-    
-else
-    tfull = false;
-    ang = [];
-end
+
+% if nargin == 4
+%     if varargin{1} == "tfull"
+%         tfull = true;
+%         ang = [];
+%     else
+%         error('variable incorrect: tfull')
+%     end
+%     
+% elseif nargin == 5
+%     if varargin{1} == "tfull" && varargin{2} == "radians"
+%         tfull = true;
+%         ang = 'radians';
+%     else
+%         error('variables incorrect: tfull/angle type')
+%     end
+%     
+% else
+%     tfull = false;
+%     ang = [];
+% end
     
     
 % Initialise arrays
@@ -75,13 +104,7 @@ for n = 1:size(surfaceVertices, 1)
     
     % All real struts will have two identical neighbouring values in
     % strutID. 
-    
-    % strutID(segmentsIndex) gives a matrix of size(segmentsIndex) showing
-    % the ID for each element in segmentsIndex. The rows of the struts we
-    % want to keep will either contain all zeros, or all ones. Therefore,
-    % the sum of each row should = 0 or = 2. We remove the rows that don't
-    % possess this attribute.
-    
+        
     % Check strutID to remove
     segmentsCheck = sum(strutID(segmentsIndex), 2);
     segmentsIndex = segmentsIndex(segmentsCheck == 0 | segmentsCheck == 2, :);
@@ -101,7 +124,8 @@ for n = 1:size(surfaceVertices, 1)
     % Calculate distance and normals to line segments
     for i = 1:length(distanceToSegments)
         [distanceToSegments(i), segmentsSurfaceNormal(i, :), ~, tSegments(i)] = intersectionratio(...
-            surfaceVertices(n, :), segments(i*2-1, :), segments(i*2, :), tfull);
+            surfaceVertices(n, :), segments(i*2-1, :), segments(i*2, :));
+%             surfaceVertices(n, :), segments(i*2-1, :), segments(i*2, :), tfull);
     end
     
     % Only store the index of the closest line segment and its
