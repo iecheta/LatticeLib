@@ -1,6 +1,6 @@
 %% Calculate mesh quality
 clear
-filesave = true;
+filesave = false;
 %% Load example data
 load tetmesh.mat
 
