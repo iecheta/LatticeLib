@@ -17,7 +17,17 @@ LatticeLib consists of a select set of functions developed during my PhD. The fo
 
 ## Installation
 ---
-Once LatticeLib has been downloaded, the top folder i.e. \LatticeLib must be added to MATLAB's search path. To do this, open MATLAB and enter `pathtool` into the command window. Then select "Add with Subfolders...", select "\LatticeLib" and save your changes.
+Once LatticeLib has been downloaded, all of its folders (excluding .git) must be added to the MATLAB search path. To do this, follow these steps:
+* In MATLAB, change the current folder to ...\LatticeLib\functions
+* Enter the command `latticelibinstall` into the command window. This command will run the function `latticelibinstall.m` which automatically adds all required folders to the MATLAB search path.
+
+If any problems with installation persist, try the following:
+* Enter `pathtool` into the command window
+* Select "Add with Subfolders..." and select the folder \exampledata
+* Repeat the above bullet point for the remaining two folders, i.e. \functions and \scripts
+* Select "Save" and close the window
+
+Note: `latticelibinstall.m` does not check if the folders have already been added to the search path.
 
 ## Structure
 ---
@@ -51,7 +61,7 @@ The following scripts are located in the subfolder \xct:
 |plots_xct.m|Example plots of all the above scripts in this table|
 
 ### \functions
-* Most of the functions have explanations about their inputs and outputs, if you wish to use them externally. See functions list
+* Most of the functions have explanations about their inputs and outputs, if you wish to use them externally.
 * The additional folder \extra contains functions (and any dependencies) that I wrote for other things not used by LatticeLib but that I felt might be useful.
 
 ### \exampledata

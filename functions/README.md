@@ -1,5 +1,5 @@
 # Functions
-Explanations of all of the functions. The functions in subfolder \extra are explained after the following table.
+Decriptions of all of the functions used by LatticeLib.
 
 |function|description|
 |------------|-------|
@@ -11,6 +11,7 @@ Explanations of all of the functions. The functions in subfolder \extra are expl
 | cropvolume.m| Crop volumes using a plane parallel to x-y plane|
 | dotangle.m| Calculate angle (in degrees) between two vectors|
 |intersectionratio.m| Calculate intersection ratio, and additional vectors|
+|latticelibinstall.m| Add LatticeLib's folders to the MATLAB search path|
 |normalVector.m| Calculates normal vector in +z direction |
 |pcloudrotatexy.m| Rotate the pointcloud of inclined struts and make it perpendicular to xy plane|
 |plotunwrap.m| Surface unwrapping plotting function|
@@ -35,17 +36,3 @@ Explanations of all of the functions. The functions in subfolder \extra are expl
 |tetregular.m| Create regular tetrahedron|
 |tetsurfacecheck.m| Identify surface tetrahedra|
 |tetvolume.m| Calculate volume of tetrahedron|
-
-
-
-## \extra
-The following functions are not used by LatticeLib but may be useful
-
-|function|description|
-|------------|-------|
-|abaqusfilegen.m| Generate .inp file for lattice stiffness calculation in Abaqus.|
-|extractflatpoints.m| Find top and bottom node sets. abaqusfilegen.m dependency|
-|meshfilter.m| Remove erroneous points from iso2mesh mesh. |
-|stlvol.m| Calculate volume enclosed by triangulated surface|
-|tetview.m| Plot individual tetrahedron and its corresponding regular tetrahedron|
-|voxelise.m| Extract individual voxels from a 3D array|
