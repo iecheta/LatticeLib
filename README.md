@@ -45,7 +45,7 @@ The [`\scripts`](/scripts/) folder contains scripts providing demonstrations whi
 |filename|description|
 |------------|-------|
 |[lattice_build_ideal.m](/scripts/lattice/lattice_build_ideal.m)| Generate triangulated surface of BCCZ lattice structure with **no defects**|
-|[lattice_build_defects.m](/scripts/lattice/lattice_build_defects.m)|Generate tirangulated surface of BCCZ lattice structure with **form defects**. The parameters of the form defects are derived from XCT data analysed in \scripts\xct\cross_section_analysis.m|
+|[lattice_build_defects.m](/scripts/lattice/lattice_build_defects.m)|Generate triangulated surface of BCCZ lattice structure with **form defects**. The parameters of the form defects are derived from XCT data analysed in [\scripts\xct\cross_section_analysis.m](/scripts/xct/cross_section_analysis.m)|
 |[surface_roughness.m](/scripts/lattice/surface_roughness.m)|Model **surface defects** by applying a displacement function to the strut surface|
 |[create_mesh.m](/scripts/lattice/create_mesh.m)|Convert surface mesh to tetrahedral mesh|
 |[mesh_quality.m](/scripts/lattice/mesh_quality.m)|Calculate quality of all elements in the mesh|
@@ -65,7 +65,7 @@ The [`\functions`](/functions) folder contains all of the functions used by Latt
 
 ### `\exampledata`
 
-This folder contains all the data files (.mat) which are - by default - used by the scripts. The contents of this folder are required so that each script can perform independently, that is, without having to run any other code. The data files are organised into two folders: [`\lattice`](/exampledata/lattice/), and [`\xct`](/exampledata/xct/)) (reflecting the folder structure in `\scripts`).
+The [`\exampledata`](/exampledata/) folder contains all the data files (.mat) which are - by default - used by the scripts. The contents of this folder are required so that each script can perform independently, that is, without having to run any other code. The data files are organised into two folders: [`\lattice`](/exampledata/lattice/), and [`\xct`](/exampledata/xct/)) (reflecting the folder structure in [`\scripts`](/scripts/)).
 
 ## Dependencies
 ---
