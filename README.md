@@ -40,7 +40,7 @@ LatticeLib consists of three main folders:
 | \exampledata       | Data files (.mat) used to load the example data from each script. Contains two subfolders: \lattice, \xct.   |
 
 ### \scripts
-The following scripts are located in the subfolder \lattice:
+The scripts in this folder provide demonstrations showcasing how LatticeLib's functions are used. The scripts are sorted into two subfolders. The following scripts are located in the subfolder \lattice:
 
 |filename|description|
 |------------|-------|
@@ -61,8 +61,7 @@ The following scripts are located in the subfolder \xct:
 |plots_xct.m|Example plots of all the above scripts in this table|
 
 ### \functions
-* Most of the functions have explanations about their inputs and outputs, if you wish to use them externally.
-* The additional folder \extra contains functions (and any dependencies) that I wrote for other things not used by LatticeLib but that I felt might be useful.
+This folder contains all of the functions used by LatticeLib. Most of the functions have explanations about their inputs and outputs, if you wish to use them externally. Additionally, the scripts (in the folder \scripts) hopefully demonstrate how the functions are used. The additional folder \extra contains functions (and any dependencies) that I wrote for other things not used by LatticeLib but that I felt might be useful.
 
 ### \exampledata
 
@@ -71,6 +70,8 @@ This folder contains all the data files (.mat) which are - by default - used by 
 ## Dependencies
 ---
 There is one external dependency, found in \scripts\lattice\create_mesh.m. Conversion of triangulated surface mesh into tetrahedral mesh - i.e. a 3D Delaunay triangulation - is performed using [iso2mesh](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Home) v1.9.0. iso2mesh must be [downloaded](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Download) and added to MATLAB's search path.
+
+Iso2mesh can be added to MATLAB's search path by again entering the `pathtool` command and selecting "Add with subfolders..." to add the iso2mesh parent folder and all its subfolders. The iso2mesh website discusses installation [here.](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Doc/Installation)
 
 ## Known Issues
 ---
