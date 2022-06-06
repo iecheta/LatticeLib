@@ -65,7 +65,7 @@ The [`\functions`](/functions) folder contains all of the functions used by Latt
 
 ### `\exampledata`
 
-The [`\exampledata`](/exampledata/) folder contains all the data files (.mat) which are - by default - used by the scripts. The contents of this folder are required so that each script can perform independently, that is, without having to run any other code. The data files are organised into two folders: [`\lattice`](/exampledata/lattice/), and [`\xct`](/exampledata/xct/)) (reflecting the folder structure in [`\scripts`](/scripts/)).
+The [`\exampledata`](/exampledata/) folder contains all the data files (.mat) which are - by default - used by the scripts. The contents of this folder are required so that each script can perform independently, that is, without having to run any other code. The data files are organised into two folders: [`\lattice`](/exampledata/lattice/), and [`\xct`](/exampledata/xct/) (reflecting the folder structure in [`\scripts`](/scripts/)).
 
 ## Dependencies
 ---
