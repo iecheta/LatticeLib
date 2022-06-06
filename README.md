@@ -40,7 +40,7 @@ LatticeLib consists of three main folders:
 | [`\exampledata`](/exampledata/)      | Data files (.mat) used to load the example data from each script. Contains two subfolders: [`\lattice`](/exampledata/lattice/), [`\xct`](/exampledata/xct/).   |
 
 ### `\scripts`
-The [`\scripts`](/scripts/) folder contains scripts providing demonstrations which showcase how LatticeLib's functions are used. The scripts are sorted into two subfolders. The following scripts are located in the subfolder [`\lattice`](/scripts/lattice/):
+The [`\scripts`](/scripts/) folder contains scripts which demonstrate how LatticeLib's functions are used. The scripts are sorted into two subfolders. The following scripts are located in the subfolder [`\lattice`](/scripts/lattice/):
 
 |filename|description|
 |------------|-------|
