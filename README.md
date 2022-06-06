@@ -51,7 +51,7 @@ The [`\scripts`](/scripts/) folder contains scripts which demonstrate how Lattic
 |[mesh_quality.m](/scripts/lattice/mesh_quality.m)|Calculate quality of all elements in the mesh|
 |[plots_lattice.m](/scripts/lattice/plots_lattice.m)|Example plots of all the above scripts in this table|
 
-The following scripts are located in the subfolder \xct:
+The following scripts are located in the subfolder [\xct](/scripts/xct/):
 
 |filename|description|
 |------------|-------|
