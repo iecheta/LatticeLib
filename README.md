@@ -17,8 +17,8 @@ LatticeLib consists of a select set of functions developed during my PhD. The fo
 
 ## Installation
 ---
-Once LatticeLib has been downloaded, all of its folders (excluding `\.git`) must be added to the MATLAB search path. To do this, follow these steps:
-* In MATLAB, change the current folder to `...\LatticeLib\functions`
+Once the LatticeLib ZIP file has been downloaded and extracted, all of its folders (excluding `\.git`) must be added to the MATLAB search path. To do this, follow these steps:
+* In MATLAB, change the current folder to `...\LatticeLib-main\functions`
 * Enter the command `latticelibinstall` into the command window. This command will run the function [`latticelibinstall.m`](/functions/latticelibinstall.m) which automatically adds all required folders to the MATLAB search path.
 
 If any problems with installation persist, try the following:
