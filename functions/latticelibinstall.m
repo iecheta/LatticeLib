@@ -6,4 +6,4 @@ addpath(genpath('..\exampledata'))
 addpath(genpath('..\functions'))
 addpath(genpath('..\scripts'))
 savepath
-disp('LatticeLib folders added to MATLAB searach path.')
+disp('LatticeLib folders added to MATLAB search path.')
