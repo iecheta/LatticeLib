@@ -136,7 +136,7 @@ if exist(fullfile(cd, filename), 'file')
     return
 else
     disp(['Saving data files to current directory.'])
-    clear stl_path
+    clear stl_path filesave
     save(filename)
 end
 

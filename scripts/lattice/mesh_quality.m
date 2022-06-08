@@ -43,6 +43,7 @@ if exist(fullfile(cd, filename), 'file')
     warning(['"' filename '" already exists in the current directory. Data file not saved.'])
 else
     disp(['"' filename '" saved to current directory.'])
+    clear filesave
     save(filename, 'tet_centroid', 'surfaceID', 'qualFactor',...
         'mean_qual_all', 'stddev', 'mean_qual_surf', 'mean_qual_body')
 end

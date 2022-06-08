@@ -105,6 +105,7 @@ else
     disp('Saving data files to current directory.')
 end
 
+clear filesave
 save(filename)
 save(['pdf_offset_' setname], 'offset_pdf')
 save(['pdf_radii_' setname], 'radii_pdf')
