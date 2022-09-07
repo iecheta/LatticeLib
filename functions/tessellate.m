@@ -6,8 +6,6 @@ cell_count = prod(n);
 unit_cell_length = size(d, 1);
 
 tessellation_volume = repmat(inf(size(d)), n);
-unit_cell = tessellation_volume;
-
 
 if sum(unique(z(:)==-cs/2)) ~= 1
     warning('Tessellation points: approximated')
@@ -35,7 +33,7 @@ shift = index2-index1;
 %%
 
 [x_shift, y_shift, z_shift] = meshgrid(...
-    [1, [shift*[1:n(1)-1]+1]], [1, [shift*[1:n(2)-1]+1]], [1, [shift*[1:n(3)-1]+1]]);
+    [1, shift*(1:n(1)-1)+1], [1, shift*(1:n(2)-1)+1], [1, shift*(1:n(3)-1)+1]);
 
 
 for i = 1:cell_count
@@ -46,9 +44,8 @@ for i = 1:cell_count
     e1 = z_shift(i);
     f1 = e1+unit_cell_length-1;
     
-    unit_cell(a1:b1, c1:d1, e1:f1) = d;
-    tessellation_volume = min(tessellation_volume, unit_cell);
-    unit_cell(:) = inf;
+    tessellation_volume(a1:b1, c1:d1, e1:f1) = min(...
+        tessellation_volume(a1:b1, c1:d1, e1:f1), d) ;
         
 end
 
