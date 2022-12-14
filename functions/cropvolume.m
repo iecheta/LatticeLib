@@ -1,4 +1,4 @@
-function [u_crop] = cropvolume(u, crop_height_top, crop_height_bottom, z)
+function [u_crop] = cropvolume(u, z_max, z_min, z)
 
 % Crop volumes using a plane parallel to x-y plane
 
@@ -13,17 +13,17 @@ function [u_crop] = cropvolume(u, crop_height_top, crop_height_bottom, z)
 
     
 %%
-h = abs(crop_height_top-z);
-[~, Z1] = min(h, [], 3);
-Z1 = Z1(1);
+h = abs(z_max-z);
+[~, index1] = min(h, [], 3);
+index1 = index1(1);
 
-h2 = abs(crop_height_bottom-z);
-[~, Z2] = min(h2, [], 3);
-Z2 = Z2(1);
+h2 = abs(z_min-z);
+[~, index2] = min(h2, [], 3);
+index2 = index2(1);
 
 % Crop a flat area in z-direction
 crop = inf(size(u));  
-crop(:, :, [1:Z2, Z1:size(u, 3)]) = 0;
+crop(:, :, [1:index2, index1:size(u, 3)]) = 0;
 
 u_crop = min(-u, crop);
 
