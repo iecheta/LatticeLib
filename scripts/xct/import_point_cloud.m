@@ -33,7 +33,6 @@ dist_cut_vert = 0.64;
 
 %% Import stl file
 disp('Importing STL file ...')
-lattice_name = input('Enter prefix to be added to all output data files: ', 's');
 [stl_file, stl_path] = uigetfile('*','Select STL file');
 cd(stl_path)
 
@@ -129,6 +128,8 @@ end
 if filesave == false
     return
 end
+
+lattice_name = input('Enter prefix to be added to all output data files: ', 's');
 
 filename = 'importdata.mat';
 if exist(fullfile(cd, filename), 'file')
